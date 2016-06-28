@@ -21,6 +21,6 @@ public interface RestInterface {
 
     @Headers({"Content-Type: application/json",
             "Accept: application/json"})
-    @GET("videos?")
-    Observable<VideoDetails> getVideoDetails(@Query("id") String id, @Query("key") String key, @Query("part") String part);
+    @GET("videos")
+    Call<VideoDetails> getVideoDetails(@Query("id") String id, @Query("key") String key, @Query("part") String part);
 }

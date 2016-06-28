@@ -25,7 +25,18 @@ public class ServiceGenerator {
             .addConverterFactory(GsonConverterFactory.create())
             .build();
 
+    private static Retrofit youtube_retrofit = new Retrofit.Builder()
+            .baseUrl(GlobalUrl.YOUTUBE_TITLE_URL)
+            .client(client)
+            .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+            .addConverterFactory(GsonConverterFactory.create())
+            .build();
+
     public static <S> S createService(Class<S> serviceClass) {
         return retrofit.create(serviceClass);
+    }
+
+    public static <S> S createYoutubeService(Class<S> serviceClass) {
+        return youtube_retrofit.create(serviceClass);
     }
 }

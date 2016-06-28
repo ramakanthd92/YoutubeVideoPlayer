@@ -40,6 +40,8 @@ import com.google.android.youtube.player.YouTubePlayerFragment;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailLoader.ErrorReason;
 import com.google.android.youtube.player.YouTubeThumbnailView;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -53,6 +55,7 @@ import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -65,12 +68,16 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
@@ -87,10 +94,13 @@ import rx.schedulers.Schedulers;
 @TargetApi(13)
 public final class VideoListDemoActivity extends FragmentActivity implements OnFullscreenListener {
 
+  private static String TAG = "VideoListDemoActivity";
   /** The duration of the animation sliding up the video in portrait. */
   private static final int ANIMATION_DURATION_MILLIS = 300;
   /** The padding between the video list and the video in landscape orientation. */
   private static final int LANDSCAPE_VIDEO_PADDING_DP = 5;
+
+  public static  List<VideoEntry> VIDEO_LIST = new ArrayList<VideoEntry>();
 
   /** The request code when calling startActivityForResult to recover from an API service error. */
   private static final int RECOVERY_DIALOG_REQUEST = 1;
@@ -230,15 +240,23 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
    */
   public static final class VideoListFragment extends ListFragment {
 
-    private static  List<VideoEntry> VIDEO_LIST;
-    List<VideoEntry> list = new ArrayList<VideoEntry>();
-
-    public static void addVideoList(String videoTitle, String id) {
-      VIDEO_LIST.add(new VideoEntry(videoTitle, id));
-    }
+   // List<VideoEntry> list = new ArrayList<VideoEntry>();
 
     private PageAdapter adapter;
     private View videoBox;
+
+    public void addVideoList(String videoTitle, String id) {
+      Log.d(TAG, "addVideoList not called");
+      if (VIDEO_LIST != null)
+        Log.d(TAG, "Video list size" + VIDEO_LIST.size());
+        Log.d(TAG, VIDEO_LIST.toString());
+        VIDEO_LIST.add(new VideoEntry(videoTitle, id));
+
+        // adapter.add(new VideoEntry(videoTitle, id));
+        adapter = new PageAdapter(getActivity(), VIDEO_LIST);
+        setListAdapter(adapter);
+        adapter.notifyDataSetChanged();
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -538,9 +556,26 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
 
 
   private void getVideoDetails(List<String> ids) {
-    RestInterface service = ServiceGenerator.createService(RestInterface.class);
+    Log.d(TAG, "reached get Video Details" + ids.toString());
+    RestInterface service = ServiceGenerator.createYoutubeService(RestInterface.class);
     for( String id: ids) {
-      Observable<VideoDetails> call = service.getVideoDetails(id,accessKey,contentType);
+      Call<VideoDetails> call = service.getVideoDetails(id,accessKey,contentType);
+      call.enqueue(new Callback<VideoDetails>() {
+        @Override
+        public void onResponse(Call<VideoDetails> call, Response<VideoDetails> response) {
+          Item s =  response.body().getItems().get(0);
+          synchronized (VIDEO_LIST) {
+            listFragment.addVideoList(s.getSnippet().getTitle(), s.getId());
+          }
+        }
+
+        @Override
+        public void onFailure(Call<VideoDetails> call, Throwable t) {
+          // Log error here since request failed
+        }
+      });
+
+      /*Observable<VideoDetails> call = service.getVideoDetails(id,accessKey,contentType);
 
       Subscription subscription = call
               .subscribeOn(Schedulers.io()) // optional if you do not wish to override the default behavior
@@ -565,7 +600,7 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
                   Item s =  response.getItems().get(0);
                   listFragment.addVideoList(s.getSnippet().getTitle(), s.getId());
                 }
-              });
+              }); */
     }
   }
 

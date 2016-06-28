@@ -23,7 +23,8 @@
 
   <uses-permission android:name="android.permission.INTERNET"/>
 
-  <application android:label="@string/youtube_api_demo">
+  <application android:label="@string/youtube_api_demo"
+      android:name=".activity.YoutubeApplication">
 
     <activity
         android:label="@string/youtube_api_demo"
