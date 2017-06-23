@@ -16,10 +16,10 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <string name="youtube_api_demo">YouTube API Demos</string>
+    <string name="youtube_api_demo">Baymack</string>
 
     <string name="videowall_demo_name">Video Wall</string>
-    <string name="videolist_demo_name">Video List</string>
+    <string name="videolist_demo_name">Baymack Videos</string>
     <string name="standalone_player_demo_name">Standalone Player</string>
     <string name="playerview_demo_name">Simple PlayerView</string>
     <string name="fragment_demo_name">Simple PlayerFragment</string>

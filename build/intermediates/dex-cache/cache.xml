@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\commons-lang\commons-lang\2.6\ce1edb914c94ebc388f086c6827e8bdeec71ac2\commons-lang-2.6.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="0ce1edb914c94ebc388f086c6827e8bdeec71ac2">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\commons-lang-2.6_fe93823b04bd51ac2eb4f594880f5fc11899532e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.19.0\81dbf9795d387d5e80e55346582d5f2fb81a42eb\google-http-client-jackson2-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="81dbf9795d387d5e80e55346582d5f2fb81a42eb">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\google-http-client-jackson2-1.19.0_bef1c4964cad3bd1a5207e75ed1ff08a67dd5070.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.19.1\b09ccfa9ac71b52b60ba4c1ab630150685d58c32\google-api-client-1.19.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="b09ccfa9ac71b52b60ba4c1ab630150685d58c32">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\google-api-client-1.19.1_0f3ff3bde3b8ae0f8d207bd17df32ddba001ff91.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="516c03b21d50a644d538de0f0369c620989cd8f0">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\jsr305-2.0.1_a30f47bdf8984e1ddcdcce51ec5d30c6834fa8ab.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.facebook.fresco\fbcore\0.10.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d323cf4983bdfce7136a1ce5e32710e1b36b20fe">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.facebook.fresco-fbcore-0.10.0_6e4692ac3809a511094ca1cc51e690937f195073.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.1.4\76b956e45e19e4e081a9c52a68a3c078e3b2cf17\jackson-annotations-2.1.4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="76b956e45e19e4e081a9c52a68a3c078e3b2cf17">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\jackson-annotations-2.1.4_365c8542847219ebb1ad61deb2f3c5b42462f472.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho-okhttp3\1.3.0\a4a4b2770ad38d26c7ffe10c989e555e635669e5\stetho-okhttp3-1.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a4a4b2770ad38d26c7ffe10c989e555e635669e5">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\stetho-okhttp3-1.3.0_2b8a2b6c50ef5675205882db56bce0d22f2928b9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.8.0\5ea7af56cc7c567ed9856d99efb30740e9b17ff\okio-1.8.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\okio-1.8.0_95f5b30b4beaa66591438c194a3e6cdbc80f59fd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="345a1b5cf5b144ce18ba6962bc66a7e2f26c1c1b">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-8.3.0_d1e460953f965fc9c237a2624ebbe97b586a0cdd.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\library-2.4.0_d25304ec4a313ab0f03017b4e989c6ee4ce5f649.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.3.0\2b802460eea20f8f2ad9c08c74e0f14718e88aa9\okhttp-3.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\okhttp-3.3.0_77e17d55914e75d60698b421247812569b15f0f7.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-auth\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="fd76d95678a6b2b8a49bb8a9fb5bcef7aedb70e7">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-auth-8.3.0_85c4d2b5190c5b92a430be2515bc88576d5ccd82.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.1.4\129874135e6081269ace2312092031558865de12\bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\bolts-android-1.1.4_d28595bb6b077f4318e9bd4e48a4ebbbd5ad5ad8.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.1.4\61d1e5aaf474462b0c9bfef8aeb6a7205bd56a90\jackson-databind-2.1.4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="61d1e5aaf474462b0c9bfef8aeb6a7205bd56a90">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\jackson-databind-2.1.4_b47b9d0d2e562420888dac24434d4d554870251d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\commons-cli\commons-cli\1.2\2bf96b7aa8b611c177d329452af1dc933e14501c\commons-cli-1.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2bf96b7aa8b611c177d329452af1dc933e14501c">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\commons-cli-1.2_62877b08da6a8a05e5e96a13f7fa9f4b3a103b7f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\retrofit-2.1.0_187177f83816ff0a7c242eb1213553c07dc44e25.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\javax.validation\validation-api\1.1.0.CR2\777d153d3785f9a2af379ecd39dde5273c3ae853\validation-api-1.1.0.CR2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="777d153d3785f9a2af379ecd39dde5273c3ae853">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\validation-api-1.1.0.CR2_1f5b45e38f0a4acea48d774acbe1b1a3d4dd0e66.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.4\8896e10f8b07918b60c835b45a05507fa213e84\jackson-core-2.1.4.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="08896e10f8b07918b60c835b45a05507fa213e84">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\jackson-core-2.1.4_e9aae17cc5dfe5c966e9afe36950a977c79944d2.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\adapter-rxjava\2.1.0\693eddc23e87ab13f9cf5001707ce8e7e1d1ff01\adapter-rxjava-2.1.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="693eddc23e87ab13f9cf5001707ce8e7e1d1ff01">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\adapter-rxjava-2.1.0_d34731b5fe1f25e9de2a7e83a89a30094113427a.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.google.oauth-client\google-oauth-client\1.19.0\d473a8962e14a707a3716637e4898bb2dd9643f2\google-oauth-client-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="d473a8962e14a707a3716637e4898bb2dd9643f2">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\google-oauth-client-1.19.0_90c89d05d781de85cf8405d85872d72a7a53bd44.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.facebook.stetho\stetho\1.3.0\87e6bfd8d961a57cf8cbecebcbd68489d41bd4fc\stetho-1.3.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="87e6bfd8d961a57cf8cbecebcbd68489d41bd4fc">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\stetho-1.3.0_c02766a1737c61a27bcc2ae6d9e7dd5472007740.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.1.1_b415833f3a9d02e7a90e4895679c4740f5324aa1.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\io.reactivex\rxjava\1.1.5\ece7b5d0870e66d8226dab6dcf47a2b12afff061\rxjava-1.1.5.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="ece7b5d0870e66d8226dab6dcf47a2b12afff061">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\rxjava-1.1.5_eb112580e3cf15dcdb420dfc92b8d120ba616f42.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="01a90bbb9495a8bbf6f3cfdf12f1b35caaa9524b">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-8.3.0_063353b848d0d64e3694e998ed5a4f2cf6ef7bf6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.facebook.fresco\fresco\0.10.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="857099e23430445aeb65cf703d5adf646ff280f1">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.facebook.fresco-fresco-0.10.0_9522092eadd45f07c931e232a6748754f981fdb5.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\gson-2.7_0e469d14f9b29ade1317399e94790299059934c4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\io.reactivex\rxandroid\0.23.0\9c437ce12df38b57fde4e3bb38ef6859f85ff737\rxandroid-0.23.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="9c437ce12df38b57fde4e3bb38ef6859f85ff737">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\rxandroid-0.23.0_bbcd82ac8b6bba728b60abfb8a80130cf7926dce.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\converter-gson-2.1.0_d0599cc3f11a4612b4ca40c0d087cc737cc955b3.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.google.guava\guava-jdk5\13.0\381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7\guava-jdk5-13.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\guava-jdk5-13.0_01a984beb4682c6a0f34634c6bdbfa321cc4c753.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.2\a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d\joda-time-2.2.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a5f29a7acaddea3f4af307e8cf2d0cc82645fd7d">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\joda-time-2.2_693db033fa8a79342dce4e661d712e44756300ac.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.facebook.fresco\drawee\0.10.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="65f0c887ee1f57cd0ea65b228e39b7f35372b798">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.facebook.fresco-drawee-0.10.0_aa7469e60cdbcf111c09bbe06af8eab8ee8942fe.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\AppData\Local\Android\sdk2\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\support-annotations-23.1.1_25446c44861d310e29408fb77043b8a1a6e7256f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\libs\YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\YouTubeAndroidPlayerApi_4779a707002fb8ae75bd462606639605dc26edec.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client\1.19.0\cdca49ad0977c040f603478aa2e16b2775c8fec6\google-http-client-1.19.0.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="cdca49ad0977c040f603478aa2e16b2775c8fec6">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\google-http-client-1.19.0_2ff1b008611a7d4c1a91d0e1aded1aa50da754e4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline-base\0.10.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="5e88a2a26ac71cd7f8fd8bd9f9381fa06d1a47a3">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.facebook.fresco-imagepipeline-base-0.10.0_7021fd26b56aa17df995e29012ab2d37dc058321.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.facebook.fresco\imagepipeline\0.10.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="6e1ed00013584399dbe27d45ac1fd6a9828c9fca">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\com.facebook.fresco-imagepipeline-0.10.0_631617961d914a93a26e3e1fca37f93e2c24b552.jar" />
+    </item>
+    <item
+        jar="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.3"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\Ramakanth\YoutubeSample\app\build\intermediates\pre-dexed\release\internal_impl-23.1.1_150bae8e44f4d4ae7db5724ffc2288aa70415c2f.jar" />
+    </item>
+
+</items>

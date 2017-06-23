@@ -54,6 +54,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Gravity;
@@ -74,6 +75,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -82,6 +84,7 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Action1;
 import rx.schedulers.Schedulers;
 
 /**
@@ -112,7 +115,7 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
   private VideoFragment videoFragment;
 
   private View videoBox;
-  private View closeButton;
+  private static TextView timerText;
 
   private boolean isFullscreen;
 
@@ -130,8 +133,8 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
         (VideoFragment) getFragmentManager().findFragmentById(R.id.video_fragment_container);
 
     videoBox = findViewById(R.id.video_box);
-    closeButton = findViewById(R.id.close_button);
-
+   // closeButton = findViewById(R.id.close_button);
+    timerText = (TextView) findViewById(R.id.clock);
     videoBox.setVisibility(View.INVISIBLE);
 
     layout();
@@ -185,7 +188,7 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
 
     listFragment.getView().setVisibility(isFullscreen ? View.GONE : View.VISIBLE);
     listFragment.setLabelVisibility(isPortrait);
-    closeButton.setVisibility(isPortrait ? View.VISIBLE : View.GONE);
+    //closeButton.setVisibility(isPortrait ? View.VISIBLE : View.GONE);
 
     if (isFullscreen) {
       videoBox.setTranslationY(0); // Reset any translation that was applied in portrait.
@@ -274,12 +277,13 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
     }
 
     @Override
-    public void onListItemClick(ListView l, View v, int position, long id) {
+    public void onListItemClick(ListView l, View v, final int position, long id) {
       String videoId = VIDEO_LIST.get(position).videoId;
 
-      VideoFragment videoFragment =
+      final VideoFragment videoFragment =
           (VideoFragment) getFragmentManager().findFragmentById(R.id.video_fragment_container);
-      videoFragment.setVideoId(videoId);
+      videoFragment.setVideoId(videoId, position);
+
 
       // The videoBox is INVISIBLE if no video was previously selected, so we need to show it now.
       if (videoBox.getVisibility() != View.VISIBLE) {
@@ -440,6 +444,7 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
 
     private YouTubePlayer player;
     private String videoId;
+    private int pos;
 
     public static VideoFragment newInstance() {
       return new VideoFragment();
@@ -460,11 +465,53 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
       super.onDestroy();
     }
 
-    public void setVideoId(String videoId) {
+    public void setVideoId(final  String videoId , final int position) {
       if (videoId != null && !videoId.equals(this.videoId)) {
         this.videoId = videoId;
         if (player != null) {
-          player.cueVideo(videoId);
+          player.loadVideo(videoId);
+          Observable<Long> observable = Observable.interval(30, TimeUnit.SECONDS, Schedulers.io());
+          new CountDownTimer(30000,1000) {
+            public void onTick(long millsUntilfinished) {
+              timerText.setText("" + (30000-millsUntilfinished+1000)/1000);
+            }
+
+            public void onFinish()
+            {
+              timerText.setText("30");
+            }
+          }.start();
+
+          Subscription subscription =  observable
+                  .subscribeOn(Schedulers.io())
+                  .observeOn(AndroidSchedulers.mainThread())
+                  .subscribe(new Action1<Long>() {
+                    @Override
+                    public void call(Long aLong) {
+                      player.loadVideo(VIDEO_LIST.get(pos).videoId);
+                      pos = (pos + 1)%10;
+                      new CountDownTimer(30000,1000) {
+                         public void onTick(long millsUntilfinished) {
+                          timerText.setText("" + (30000-millsUntilfinished+1000)/1000);
+                         }
+
+                        public void onFinish()
+                        {
+                          timerText.setText("30");
+                        }
+                      }.start();
+
+                    }
+                  });
+        }
+      }
+    }
+
+    public void playVideo(String videoId) {
+      if (videoId != null && !videoId.equals(this.videoId)) {
+        this.videoId = videoId;
+        if (player != null) {
+          player.loadVideo(videoId);
         }
       }
     }
@@ -475,13 +522,21 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
       }
     }
 
+//    @Override
+//    public void play() {
+//      if (player != null) {
+//        player.play();
+//      }
+//    }
+
     @Override
-    public void onInitializationSuccess(Provider provider, YouTubePlayer player, boolean restored) {
+    public void onInitializationSuccess(Provider provider, final YouTubePlayer player, boolean restored) {
       this.player = player;
       player.addFullscreenControlFlag(YouTubePlayer.FULLSCREEN_FLAG_CUSTOM_LAYOUT);
       player.setOnFullscreenListener((VideoListDemoActivity) getActivity());
       if (!restored && videoId != null) {
-        player.cueVideo(videoId);
+        player.loadVideo(videoId);
+
       }
     }
 
@@ -489,7 +544,6 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
     public void onInitializationFailure(Provider provider, YouTubeInitializationResult result) {
       this.player = null;
     }
-
   }
 
   private static final class VideoEntry {
@@ -501,7 +555,6 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
       this.videoId = videoId;
     }
   }
-
   // Utility methods for layouting.
 
   private int dpToPx(int dp) {
@@ -540,11 +593,7 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
 
               @Override
               public void onError(Throwable e) {
-                // cast to retrofit.HttpException to get the response code
-//                if (e instanceof HttpException) {
-//                  HttpException response = (HttpException)e;
-//                  int code = response.code();
-//                }
+
               }
 
               @Override
@@ -574,33 +623,6 @@ public final class VideoListDemoActivity extends FragmentActivity implements OnF
           // Log error here since request failed
         }
       });
-
-      /*Observable<VideoDetails> call = service.getVideoDetails(id,accessKey,contentType);
-
-      Subscription subscription = call
-              .subscribeOn(Schedulers.io()) // optional if you do not wish to override the default behavior
-              .observeOn(AndroidSchedulers.mainThread())
-              .subscribe(new Subscriber<VideoDetails>() {
-                @Override
-                public void onCompleted() {
-
-                }
-
-                @Override
-                public void onError(Throwable e) {
-                  // cast to retrofit.HttpException to get the response code
-//                if (e instanceof HttpException) {
-//                  HttpException response = (HttpException)e;
-//                  int code = response.code();
-//                }
-                }
-
-                @Override
-                public void onNext(VideoDetails response) {
-                  Item s =  response.getItems().get(0);
-                  listFragment.addVideoList(s.getSnippet().getTitle(), s.getId());
-                }
-              }); */
     }
   }
 
